@@ -136,10 +136,17 @@ def try_methods():
       -- backward  100 units
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function, per its doc-string above.
+    # DONE: 4. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     ###########################################################################
 
+    brian = rg.SimpleTurtle('turtle')
+    brian.pen = rg.Pen('brown', 5)
+
+    brian.forward(150)
+    brian.left(90)
+    brian.forward(50)
+    brian.backward(100)
 
 ###############################################################################
 # IMPORTANT: Read the NOTE below before you try to implement the next function!
