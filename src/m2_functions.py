@@ -78,7 +78,7 @@ print(math.sqrt(13))
 #NEW: call the function once, comment it out, then call it again with different values
 ###############################################################################
 def four(a,b):
-    rg.TurtleWindow()
+    window = rg.TurtleWindow()
 
     ralph = rg.SimpleTurtle('turtle')
     val = rg.SimpleTurtle()
@@ -88,6 +88,7 @@ def four(a,b):
 
     ralph.forward(100)
     val.backward(100)
+    window.close_on_mouse_click()
 
 
 
