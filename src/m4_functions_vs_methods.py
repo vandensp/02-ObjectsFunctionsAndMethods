@@ -159,7 +159,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ###########################################################################
-    # TODO: 5. Implement and test this function, per its doc-string above.
+    # DONE: 5. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #    NOTE: This function requires
@@ -168,6 +168,27 @@ def try_functions():
     #    HINT: see   jump_and_move_turtle   above.
     ###########################################################################
 
+bill = rg.SimpleTurtle('turtle')
+ted = rg.SimpleTurtle('turtle')
+grim = rg.SimpleTurtle('turtle')
+
+bill.pen = rg.Pen('yellow', 7)
+ted.pen = rg.Pen('blue', 7)
+grim.pen = rg.Pen('green', 7)
+
+bill.pen_up()
+ted.pen_up()
+grim.pen_up()
+
+
+def attempt(x1, y1, x2, y2, turtle):
+    turtle.go_to(rg.Point(x1, y1))
+    turtle.pen_down()
+    turtle.go_to(rg.Point(x2, y2))
+
+attempt(200, 100, 300, 30, bill)
+attempt(100, 200, 0, 0, ted)
+attempt(-50, 50, 100, 100, grim)
 
 ###############################################################################
 # IMPORTANT: Read the NOTE below before you try to implement the next function!
