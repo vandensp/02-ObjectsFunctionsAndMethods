@@ -226,7 +226,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ###########################################################################
-    # TODO: 6. Implement and test this function, per its doc-string above.
+    # DONE: 6. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #   NOTE: This function should ** CALL ** the
@@ -234,6 +234,25 @@ def try_methods_and_functions():
     #   function defined above.  If you don't see why, ** ASK FOR HELP. **
     ###########################################################################
 
+shrek = rg.SimpleTurtle()
+shrek.backward(150)
+
+def trying(spd, color, thickness, squares, size, twist):
+    shrek.pen = rg.Pen(color, thickness)
+    shrek.speed = spd
+
+    for k in range (squares):
+
+        shrek.draw_square(size)
+        shrek.right(twist)
+
+trying(1, 'blue', 5, 2, 100, 30)
+trying(5,'red', 5, 10, 50, 15)
+trying(100, 'red', 35, 8, 300, 60)
+
+shrek.pen = rg.Pen('black', 3)
+shrek.draw_circle(30)
+shrek.draw_square(50)
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
